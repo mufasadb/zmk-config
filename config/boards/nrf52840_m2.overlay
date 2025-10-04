@@ -1,0 +1,14 @@
+// nRF52840 M.2 overlay for Sofle
+// This creates the pro_micro_i2c alias that the Sofle shield expects
+
+/ {
+    aliases {
+        // Map pro_micro_i2c to the nRF52840's i2c0 peripheral
+        pro_micro_i2c = &i2c0;
+    };
+};
+
+// Configure I2C0 peripheral
+&i2c0 {
+    status = "okay";
+};
